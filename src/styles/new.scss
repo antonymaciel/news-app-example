@@ -1,0 +1,18 @@
+@import "./shared.scss";
+
+.newContainer {
+    color: $textColor;
+    float: left;
+    width: 30%;
+    border: 1px solid $textColor;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 5px;
+    max-height: 160px;
+    height: 160px;
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+}

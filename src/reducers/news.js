@@ -10,19 +10,19 @@ const weatherDataReducer = (state = initialState, action) => {
   switch (action.type) {
     case COMPLETE_SEARCH_NEWS:
         return {
-            ...initialState,
-            news: action.news.articles,
+            ...state,
+            news: [...state.news, ...action.news.articles],
             loading: false
         };
     case ERROR_NEWS:
         return {
-            ...initialState,
+            ...state,
             loading: false,
             error: true
         };
     case LOADING_SEARCH_NEWS:
         return {
-            ...initialState,
+            ...state,
             loading: true
         };
     default:

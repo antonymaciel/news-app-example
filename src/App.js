@@ -2,9 +2,9 @@ import React from 'react';
 import { createStore , applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import { Provider } from 'react-redux'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import rootReducer from './reducers'
-import Home from './components/Home'
+import Home from './containers/home'
 
 let store = createStore(
   rootReducer,

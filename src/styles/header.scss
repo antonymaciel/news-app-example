@@ -1,0 +1,37 @@
+@import "./shared.scss";
+
+.header{
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 100;
+}
+
+.navigation .item{
+  padding: 1rem;
+  float: left;
+  font-size: 1rem;
+  font-weight: bold;
+  color: $textColor;
+  text-decoration: none;
+}
+
+.top-bar {
+  background-color: $secondaryColor;
+}
+
+.title-bar {
+  min-height: 80px;
+}
+
+@media screen and (max-width: 500px) {
+  .navigation .item{
+    clear: both;
+    border-bottom: 1px solid $textColor;
+  }
+
+  .title-bar {
+    min-height: 60px;
+  }
+}

@@ -1,5 +1,5 @@
 import { COMPLETE_SEARCH_NEWS, ERROR_NEWS, LOADING_SEARCH_NEWS } from '../constants/news'
-import { api } from '../constants/config' 
+import { api, apiKey } from '../constants/config' 
 
 export const completeSearchNews = news => ({
   type: COMPLETE_SEARCH_NEWS,
@@ -15,20 +15,17 @@ export const errorNews = () => ({
 });
 
 
-export const fetchNews = searchString => (dispatch) => {
+export const fetchNews = (searchString, page) => (dispatch) => {
     dispatch(searchingNews())
-    const endpoint = `${api}?q=${searchString}&from=2019-08-03&sortBy=publishedAt&apiKey=02712375da0e4bfea8b34090b6105399`;
+    const endpoint = `${api}?q=${searchString}&sortBy=publishedAt&pageSize=15&page=${page}&apiKey=${apiKey}`;
     fetch(endpoint)
         .then(response => {
+            console.log('response', response);
             return response.json();
         })
             .then(jsonResponse => {
-                console.log(jsonResponse);
-                if (jsonResponse.status === 'ok') {
-                dispatch(completeSearchNews(jsonResponse));
-                } else {
-                dispatch(errorNews())
-                }
+              console.log('jsonResponse', jsonResponse);
+              dispatch(completeSearchNews(jsonResponse));
             })
         .catch((err) => {
             dispatch(errorNews())

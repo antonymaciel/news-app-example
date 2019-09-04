@@ -1,0 +1,21 @@
+
+/*SASS*/
+
+$primaryColor: #282c34;
+$secondaryColor: #000000;
+$textColor: #fefefe;
+$fontSize: 15px;
+
+/*
+
+@import "variables.scss";
+
+// can also be relative import
+// @import "./variables.scss";
+
+// we can use the $primaryColor variable now
+h1, h2 {
+  color: $primaryColor;
+}
+
+*/
