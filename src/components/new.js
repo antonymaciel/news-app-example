@@ -5,8 +5,8 @@ class New extends React.Component {
     render() {
         return (
             <div className="newContainer">
-                New : {this.props.new.title}
                 <img className="image" src={this.props.new.urlToImage} alt="image"/>
+                {this.props.new.title}
             </div>
         )
     }

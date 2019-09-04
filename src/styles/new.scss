@@ -10,9 +10,19 @@
     margin: 5px;
     max-height: 160px;
     height: 160px;
+    background-color: black;
+}
+
+@media screen and (max-width: 800px) {
+    .newContainer{
+        clear: both;
+        width: 100%;
+    }
 }
 
 .image {
     width: 100px;
     height: 100px;
+    float: left;
+    padding-right: 10px;
 }
