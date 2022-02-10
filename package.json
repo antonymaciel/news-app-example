@@ -5,7 +5,7 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "foundation-sites": "^6.5.3",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-foundation": "^0.9.6",
